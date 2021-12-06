@@ -56,7 +56,10 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
+createUsernames(accounts);
 displayMovements(account1.movements);
+calcBalance(account1.movements);
+calcDisplaySummary(account1.movements);
 
 function displayMovements(movements) {
   containerMovements.innerHTML = '';
@@ -74,4 +77,37 @@ function displayMovements(movements) {
 
     containerMovements.insertAdjacentHTML('afterbegin', html);
   });
+}
+
+function createUsernames(accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .reduce((prev, curr) => prev + curr[0], '');
+  });
+}
+
+function calcBalance(movements) {
+  const balance = movements.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance}€`;
+}
+
+function calcDisplaySummary(movements) {
+  const incomes = movements
+    .filter(mov => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomes}€`;
+
+  const out = movements
+    .filter(mov => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumOut.textContent = `${Math.abs(out)}€`;
+
+  const interest = movements
+    .filter(mov => mov > 0)
+    .map(mov => (mov * 1.2) / 100)
+    .filter(mov => mov >= 1)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumInterest.textContent = `${interest}€`;
 }
