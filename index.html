@@ -25,9 +25,8 @@
           placeholder="user"
           class="login__input login__input--user"
         />
-        <!-- In practice, use type="password" -->
         <input
-          type="text"
+          type="password"
           placeholder="PIN"
           maxlength="4"
           class="login__input login__input--pin"
@@ -35,6 +34,32 @@
         <button class="login__btn">&rarr;</button>
       </form>
     </nav>
+    <button class="create__btn">create account</button>
+    <div class="modal">
+      <button class="close__modal__btn">&times;</button>
+      <h1 class="create__account__label">Register with Bankist</h1>
+      <form class="create">
+        <input
+          type="text"
+          placeholder="first name"
+          class="create__input create__input--firstname"
+        />
+        <input
+          type="text"
+          placeholder="last name"
+          class="create__input create__input--lastname"
+        />
+        <input
+          type="test"
+          placeholder="pin password"
+          maxlength="4"
+          class="create__input create__input--pin"
+        />
+
+        <button class="open__account__btn">open account</button>
+      </form>
+    </div>
+    <div class="overlay"></div>
 
     <main class="app">
       <!-- BALANCE -->
