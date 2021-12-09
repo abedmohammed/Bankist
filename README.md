@@ -1,6 +1,6 @@
 # Bankist
 <!-- Small Description -->
-Bank simulator web applicated I made to practice JavaScript
+Bank simulator web application I made to practice JavaScript
 
 <!-- Demo -->
 ## Demo 📺 ##
