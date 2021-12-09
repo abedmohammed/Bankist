@@ -41,6 +41,8 @@ Log in to an account in the top right hand corner using one of the 4 existing ac
 <!-- Features -->
 ## Features 🛠 ##
 
+Made in JavaScript, HTML, and CSS using Visual Studio
+
 ☑ Manipulating array of user objects to simulate manipulation from an api
 
 ☑ Friendly and accessible UI
