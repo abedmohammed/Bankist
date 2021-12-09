@@ -39,10 +39,12 @@ Log in to an account in the top right hand corner using one of the 4 existing ac
 5️⃣ You can create an account with your name and pin, the login username will be your initials
 
 <!-- Features -->
-## Features 🛠 ##
+## Tools  🛠 ##
 
 Made in JavaScript, HTML, and CSS using Visual Studio
 
+Features:
+ 
 ☑ Manipulating array of user objects to simulate manipulation from an api
 
 ☑ Friendly and accessible UI
